@@ -1,0 +1,15 @@
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 1rem;
+  font-size: .9rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background-color: var(--accent-light);
+}
+
+footer p {
+  margin: .2rem;
+}

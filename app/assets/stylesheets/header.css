@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+}
+
+header img {
+  width: 2rem;
+  margin-right: .2rem;
+}
+
+header p {
+  font-weight: bold;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav ul {
+  display: flex;
+}
+
+.main-nav li {
+  list-style: none;
+  margin-right: 1rem;
+}
