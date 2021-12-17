@@ -1,0 +1,11 @@
+<section class="login-register">
+
+  <%= turbo_frame_tag "new_user_form" do %>
+    <%= render "users/form" %>
+  <% end %>
+
+  <div class="form-swap">
+    Already have an account? <%= link_to("Login", "/login") %>
+  </div>
+
+</section>

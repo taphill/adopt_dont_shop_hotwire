@@ -4,8 +4,14 @@
     <p>Adopt Don't Shop</p>
   <% end %>
   <nav class="main-nav">
-    <%= link_to("Shelters", "/shelters") %>
-    <%= link_to("Pets", "/pets") %>
-    <%= image_tag("user.png", alt: "User") %>
+    <%= link_to("Shelters", "/shelters", class: "nav-link") %>
+    <%= link_to("Pets", "/pets", class: "nav-link") %>
+    <% if current_user %>
+      <%= link_to("/profile", class: "user-icon") do %>
+        <%= image_tag("user.png", alt: "User icon") %>
+      <% end %>
+    <% else %>
+      <%= button_to("Login", "/login", method: :get) %>
+    <% end %>
   </nav>
 </header>

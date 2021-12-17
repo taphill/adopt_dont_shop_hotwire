@@ -26,6 +26,16 @@ header p {
   align-items: center;
 }
 
-.main-nav a {
+.main-nav .nav-link {
   margin: 0 1rem 0 0;
+}
+
+.user-icon {
+  all: initial;
+  display: flex;
+  justify-content: center;
+}
+
+.user-icon img {
+  cursor: pointer;
 }

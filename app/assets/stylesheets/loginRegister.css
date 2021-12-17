@@ -1,0 +1,26 @@
+.login-register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0;
+  background-color: var(--disabled);
+  clip-path: polygon(5% 10%, 46% 1%, 46% 10%, 100% 0, 95% 90%, 31% 100%, 31% 90%, 0% 100%);
+}
+
+.login-register turbo-frame {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.login-register form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 8rem 0 0 0;
+}
+
+.login-register .form-swap {
+  margin: 4rem;
+}
+

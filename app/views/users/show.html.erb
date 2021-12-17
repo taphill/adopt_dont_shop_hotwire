@@ -1,0 +1,5 @@
+<h1>Hello, <%= current_user.username %>!</h1>
+
+<%= form_with(url: '/logout', method: :delete) do |form| %>
+  <%= form.submit 'Log out' %>
+<% end %>

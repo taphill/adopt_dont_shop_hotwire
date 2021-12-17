@@ -8,6 +8,7 @@
 
 Pet.destroy_all
 Shelter.destroy_all
+User.destroy_all
 
 shelter_1 = Shelter.create!(name: 'Eget Arcu', city: 'South Andrew', state: 'LA', rank: 1, foster_program: true)
 shelter_2 = Shelter.create!(name: 'Sed Vulputate', city: 'Lake Skyefurt', state: 'TN', rank: 2, foster_program: true)
