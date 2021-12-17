@@ -16,6 +16,9 @@
       </div>
       <h2><%= shelter.name %></h2>
       <h2><em><%= shelter.city %>, <%= shelter.state %></em></h2>
+      <form>
+        <button formaction="/shelters/<%= shelter.id %>/pets">View Pets</button>
+      </form>
     </div>
   <% end %>
 

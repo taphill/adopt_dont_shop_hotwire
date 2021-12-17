@@ -9,9 +9,10 @@
 Pet.destroy_all
 Shelter.destroy_all
 
-shelter_1 = Shelter.create!(name: 'Vivamus At', city: 'South Andrew', state: 'LA', rank: 1, foster_program: true)
+shelter_1 = Shelter.create!(name: 'Eget Arcu', city: 'South Andrew', state: 'LA', rank: 1, foster_program: true)
 shelter_2 = Shelter.create!(name: 'Sed Vulputate', city: 'Lake Skyefurt', state: 'TN', rank: 2, foster_program: true)
 shelter_3 = Shelter.create!(name: 'Nulla Facilisi', city: 'Hilmaton', state: 'PA', rank: 3, foster_program: false)
+shelter_4 = Shelter.create!(name: 'Pellentesque Nec', city: 'North Allan', state: 'UT', rank: 4, foster_program: false)
 
 shelter_1.pets.create(name: 'Daisy', age: 1, breed: 'Irish Spaniel', adoptable: true)
 shelter_1.pets.create(name: 'Rocky', age: 8, breed: 'Fox Terrier', adoptable: true)
