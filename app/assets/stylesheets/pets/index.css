@@ -1,0 +1,35 @@
+.pets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.pet {
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.pet * {
+  margin: 0;
+}
+
+.pet h1 {
+  color: var(--code);
+}
+
+.pet h2 {
+  color: var(--text-light);
+  margin-bottom: .5rem;
+}
+
+.pet div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.pet div img {
+  width: 4rem;
+}

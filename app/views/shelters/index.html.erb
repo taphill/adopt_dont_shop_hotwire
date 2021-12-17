@@ -5,9 +5,13 @@
       <div>
         <h1>#<%= shelter.rank %></h1>
         <% if shelter.foster_program %>
-          <%= image_tag('accept.png') %>
+          <span class="tool" data-tip="Foster program available">
+            <%= image_tag('accept.png') %>
+          </span>
         <% else %>
-          <%= image_tag('cancel.png') %>
+          <span class="tool" data-tip="No foster program">
+            <%= image_tag('cancel.png') %>
+          </span>
         <% end %>
       </div>
       <h2><%= shelter.name %></h2>

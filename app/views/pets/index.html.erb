@@ -1,0 +1,18 @@
+<section class="pets-grid">
+
+  <% @pets.each_with_index do |pet, index| %>
+    <div class="pet" id="pet-<%= index %>">
+      <div>
+        <h1><%= pet.name %></h1>
+        <% if pet.adoptable %>
+          <%= image_tag('adoption_1.png') %>
+        <% else %>
+          <%= image_tag('certificate.png') %>
+        <% end %>
+      </div>
+      <h2><em><%= pet.breed %></em></h2>
+      <h2><em><%= pet.age %></em></h2>
+    </div>
+  <% end %>
+
+</section>

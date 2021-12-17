@@ -17,4 +17,9 @@ RSpec.describe 'User visits home page', type: :feature do
     click_link 'Shelters'
     expect(page).to have_current_path('/shelters')
   end
+
+  it 'can navigate to pets/index page' do
+    click_link 'Pets'
+    expect(page).to have_current_path('/pets')
+  end
 end
