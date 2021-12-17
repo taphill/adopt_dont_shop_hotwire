@@ -8,7 +8,6 @@ RSpec.describe Pet, type: :model do
     it { is_expected.to validate_presence_of(:age) }
     it { is_expected.to validate_numericality_of(:age) }
     it { is_expected.to validate_presence_of(:breed) }
-    it { is_expected.to validate_presence_of(:adoptable) }
   end
 
   describe 'relationships' do

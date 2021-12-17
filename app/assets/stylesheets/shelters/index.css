@@ -1,0 +1,36 @@
+.shelter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.shelter {
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  margin: 2rem;
+  padding: 1rem;
+}
+
+.shelter * {
+  margin: 0;
+}
+
+.shelter h2 {
+  color: var(--text-light);
+  margin-bottom: .5rem;
+}
+
+.shelter h2:first-of-type {
+  color: var(--code);
+}
+
+.shelter div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.shelter div img {
+  width: 2rem;
+}
+

@@ -12,18 +12,20 @@ header img {
 
 header p {
   font-weight: bold;
+  color: var(--text);
 }
 
 .logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
-.main-nav ul {
+.main-nav {
   display: flex;
+  align-items: center;
 }
 
-.main-nav li {
-  list-style: none;
-  margin-right: 1rem;
+.main-nav a {
+  margin: 0 1rem 0 0;
 }

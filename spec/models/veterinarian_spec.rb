@@ -8,7 +8,6 @@ RSpec.describe Veterinarian, type: :model do
     it { is_expected.to validate_presence_of(:last_name) }
     it { is_expected.to validate_presence_of(:review_rating) }
     it { is_expected.to validate_numericality_of(:review_rating) }
-    it { is_expected.to validate_presence_of(:on_call) }
   end
 
   describe 'relationships' do

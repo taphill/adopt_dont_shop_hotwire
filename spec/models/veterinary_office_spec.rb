@@ -9,7 +9,6 @@ RSpec.describe VeterinaryOffice, type: :model do
     it { is_expected.to validate_presence_of(:name) }
     it { is_expected.to validate_presence_of(:max_patient_capacity) }
     it { is_expected.to validate_numericality_of(:max_patient_capacity) }
-    it { is_expected.to validate_presence_of(:boarding_services) }
   end
 
   describe 'relationships' do

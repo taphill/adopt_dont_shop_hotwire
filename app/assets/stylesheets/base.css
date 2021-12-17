@@ -66,7 +66,7 @@ body {
   flex-direction: column;
   flex: 1;
   margin: 0 auto;
-  max-width: 45rem;
+  max-width: 65rem;
   padding: 0 .5rem;
   overflow-x: hidden;
   word-break: break-word;
@@ -87,6 +87,9 @@ header {
   margin-right: -50vw;
 }
 
+main {
+  flex: 1 0 auto;
+}
 
 /* Remove margins for header text */
 header h1,

@@ -10,7 +10,6 @@ RSpec.describe Shelter, type: :model do
     it { is_expected.to validate_presence_of(:city) }
     it { is_expected.to validate_presence_of(:rank) }
     it { is_expected.to validate_numericality_of(:rank) }
-    it { is_expected.to validate_presence_of(:foster_program) }
   end
 
   describe 'relationships' do

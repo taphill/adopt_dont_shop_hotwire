@@ -1,14 +1,10 @@
 <header>
-  <div class="logo">
+  <%= link_to('/', class: 'logo') do %>
     <%= image_tag("dog.png", alt: "Logo") %>
     <p>Adopt Don't Shop</p>
-  </div>
+  <% end %>
   <nav class="main-nav">
-    <ul>
-      <li>Shelters</li>
-      <li>Pets</li>
-      <li>Applications</li>
-      <%= image_tag("user.png", alt: "User") %>
-    </ul>
+    <%= link_to("Shelters", "/shelters") %>
+    <%= image_tag("user.png", alt: "User") %>
   </nav>
 </header>

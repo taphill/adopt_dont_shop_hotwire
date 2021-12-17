@@ -1,0 +1,18 @@
+<section class="shelter-grid">
+
+  <% @shelters.each_with_index do |shelter, index| %>
+    <div class="shelter" id="shelter-<%= index %>">
+      <div>
+        <h1>#<%= shelter.rank %></h1>
+        <% if shelter.foster_program %>
+          <%= image_tag('accept.png') %>
+        <% else %>
+          <%= image_tag('cancel.png') %>
+        <% end %>
+      </div>
+      <h2><%= shelter.name %></h2>
+      <h2><em><%= shelter.city %>, <%= shelter.state %></em></h2>
+    </div>
+  <% end %>
+
+</section>

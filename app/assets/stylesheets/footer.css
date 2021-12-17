@@ -1,13 +1,11 @@
 footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  flex-shrink: 0;
   width: 100%;
   margin-top: 1rem;
+  padding: 1rem 0;
   font-size: .9rem;
   text-align: center;
   border-top: 1px solid var(--border);
-  background-color: var(--accent-light);
 }
 
 footer p {
