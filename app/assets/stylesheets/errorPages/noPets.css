@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   margin: 4rem;
-  background-color: var(--accent-light);
+  background-color: var(--accent-bg);
   clip-path: polygon(5% 10%, 46% 1%, 46% 10%, 100% 0, 95% 90%, 31% 100%, 31% 90%, 0% 100%);
 }
 

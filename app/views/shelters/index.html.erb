@@ -1,25 +1,16 @@
 <section class="shelter-grid">
-
-  <% @shelters.each_with_index do |shelter, index| %>
-    <div class="shelter" id="shelter-<%= index %>">
-      <div>
-        <h1>#<%= shelter.rank %></h1>
-        <% if shelter.foster_program %>
-          <span class="tool" data-tip="Foster program available">
-            <%= image_tag('accept.png') %>
-          </span>
-        <% else %>
-          <span class="tool" data-tip="No foster program">
-            <%= image_tag('cancel.png') %>
-          </span>
-        <% end %>
-      </div>
-      <h2><%= shelter.name %></h2>
-      <h2><em><%= shelter.city %>, <%= shelter.state %></em></h2>
-      <form>
-        <button formaction="/shelters/<%= shelter.id %>/pets">View Pets</button>
-      </form>
-    </div>
+  <% @shelters.each do |shelter| %>
+    <%=
+      render(
+        ShelterComponent.new(
+          id: shelter.id,
+          name: shelter.name,
+          city: shelter.city,
+          state: shelter.state,
+          rank: shelter.rank,
+          foster_program: shelter.foster_program
+        )
+      )
+    %>
   <% end %>
-
 </section>

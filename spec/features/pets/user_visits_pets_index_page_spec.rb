@@ -12,15 +12,15 @@ RSpec.describe 'User visits pets/index page', type: :feature do
   end
 
   it 'can see all pets' do
-    within '#pet-0' do
+    within "#pet-#{pet_1.id}" do
       expect(page).to have_content(pet_1.name)
     end
 
-    within '#pet-1' do
+    within "#pet-#{pet_2.id}" do
       expect(page).to have_content(pet_2.name)
     end
 
-    within '#pet-2' do
+    within "#pet-#{pet_3.id}" do
       expect(page).to have_content(pet_3.name)
     end
   end

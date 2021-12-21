@@ -1,0 +1,23 @@
+<div class="shelter" id="shelter-<%= @id %>">
+
+  <div>
+    <h1>#<%= @rank %></h1>
+    <% if @foster_program %>
+      <span class="tool" data-tip="Foster program available">
+        <%= image_tag('accept.png') %>
+      </span>
+    <% else %>
+      <span class="tool" data-tip="No foster program">
+        <%= image_tag('cancel.png') %>
+      </span>
+    <% end %>
+  </div>
+
+  <h2><%= @name %></h2>
+  <h2><em><%= @city %>, <%= @state %></em></h2>
+
+  <form>
+    <button formaction="/shelters/<%= @id %>/pets">View Pets</button>
+  </form>
+
+</div>

@@ -47,7 +47,7 @@
     background: var(--accent-light);
     border-radius: .25em;
     bottom: 180%;
-    color: var(--text);
+    color: var(--bg);
     font-weight: bold;
     content: attr(data-tip);
     margin-left: -12.75em;

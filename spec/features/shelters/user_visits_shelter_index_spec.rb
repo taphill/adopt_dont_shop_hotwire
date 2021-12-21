@@ -12,7 +12,7 @@ RSpec.describe 'User visits shelters/index page', type: :feature do
 
     visit '/shelters'
 
-    within '#shelter-0' do
+    within "#shelter-#{shelter_1.id}" do
       expect(page).to have_content(shelter_1.name)
       expect(page).to have_content(shelter_1.city)
       expect(page).to have_content(shelter_1.state)
@@ -20,7 +20,7 @@ RSpec.describe 'User visits shelters/index page', type: :feature do
       expect(page).to have_button(button_name)
     end
 
-    within '#shelter-1' do
+    within "#shelter-#{shelter_2.id}" do
       expect(page).to have_content(shelter_2.name)
       expect(page).to have_content(shelter_2.city)
       expect(page).to have_content(shelter_2.state)
@@ -28,7 +28,7 @@ RSpec.describe 'User visits shelters/index page', type: :feature do
       expect(page).to have_button(button_name)
     end
 
-    within '#shelter-2' do
+    within "#shelter-#{shelter_3.id}" do
       expect(page).to have_content(shelter_3.name)
       expect(page).to have_content(shelter_3.city)
       expect(page).to have_content(shelter_3.state)
@@ -42,7 +42,7 @@ RSpec.describe 'User visits shelters/index page', type: :feature do
 
     visit '/shelters'
 
-    within '#shelter-0' do
+    within "#shelter-#{shelter_1.id}" do
       click_button button_name
     end
 

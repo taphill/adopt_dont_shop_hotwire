@@ -12,19 +12,19 @@ RSpec.describe 'User visits /shelters/:shelter_id/pets page', type: :feature do
 
       visit "/shelters/#{shelter.id}/pets"
 
-      within '#pet-0' do
+      within "#pet-#{pet_1.id}" do
         expect(page).to have_content(pet_1.name)
         expect(page).to have_content(pet_1.breed)
         expect(page).to have_content(pet_1.age)
       end
 
-      within '#pet-1' do
+      within "#pet-#{pet_2.id}" do
         expect(page).to have_content(pet_2.name)
         expect(page).to have_content(pet_2.breed)
         expect(page).to have_content(pet_2.age)
       end
 
-      within '#pet-2' do
+      within "#pet-#{pet_3.id}" do
         expect(page).to have_content(pet_3.name)
         expect(page).to have_content(pet_3.breed)
         expect(page).to have_content(pet_3.age)
