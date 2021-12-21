@@ -26,7 +26,7 @@ RSpec.describe 'User visits home page', type: :feature do
 
       user = User.find_by(username: username)
       expect(user.username).to eq(username)
-      expect(page).to have_current_path('/')
+      expect(page).to have_current_path('/profile')
     end
   end
 
@@ -104,7 +104,7 @@ RSpec.describe 'User visits home page', type: :feature do
     end
   end
 
-  context "when username already exists" do
+  context 'when username already exists' do
     it 'displays error' do
       create(:user, username: 'mikejones')
 
@@ -119,7 +119,7 @@ RSpec.describe 'User visits home page', type: :feature do
       click_button 'Create Account'
 
       within '.error-explanation' do
-        expect(page).to have_content("Username has already been taken")
+        expect(page).to have_content('Username has already been taken')
       end
     end
   end

@@ -17,5 +17,5 @@ Rails.application.routes.draw do
 
   resources :pets, only: [:index]
 
-  # match '*path', to: 'root#not_found', via: :all
+  match '*path', to: 'root#not_found', via: :all
 end

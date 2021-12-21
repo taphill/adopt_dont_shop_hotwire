@@ -15,7 +15,7 @@ RSpec.describe 'User log out', type: :feature do
   end
 
   it 'can log out' do
-    click_link 'Log out'
+    click_button 'Log out'
     expect(page).to have_current_path('/')
   end
 end

@@ -14,7 +14,7 @@ RSpec.describe 'User login', type: :feature do
       fill_in :username, with: user.username
       fill_in :password, with: user.password
 
-      click_button 'Login'
+      find('[name=commit]').click
 
       expect(page).to have_current_path('/profile')
       expect(page).to have_content("Hello, #{user.username}!")
@@ -26,7 +26,7 @@ RSpec.describe 'User login', type: :feature do
       fill_in :username, with: 'mikejones'
       fill_in :password, with: 'houston'
 
-      click_button 'Login'
+      find('[name=commit]').click
 
       expect(page).to have_current_path('/login')
 
@@ -43,13 +43,21 @@ RSpec.describe 'User login', type: :feature do
       fill_in :username, with: user.username
       fill_in :password, with: 'pass'
 
-      click_button 'Login'
+      find('[name=commit]').click
 
       expect(page).to have_current_path('/login')
 
       within '.error-explanation' do
         expect(page).to have_content('Incorrect username or password')
       end
+    end
+  end
+
+  context 'when not logged in' do
+    it 'can not visit /profile page' do
+      visit '/profile'
+
+      expect(page).to have_current_path('/login')
     end
   end
 end

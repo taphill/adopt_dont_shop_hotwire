@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class UsersController < ApplicationController
-  def show
-    @user = User.find(session[:user_id])
-  end
+  skip_before_action :require_login, except: [:show]
+
+  def show; end
 
   def new
     @user = User.new
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:user_id] = @user.id
-      redirect_to '/'
+      redirect_to '/profile'
     else
       render :new, status: :unprocessable_entity
     end
