@@ -2,6 +2,8 @@
 
 # rubocop:disable Lint/MissingSuper
 class PetComponent < ViewComponent::Base
+  attr_reader :id, :name, :age, :breed, :adoptable
+
   def initialize(data)
     @id = data[:id]
     @name = data[:name]

@@ -1,0 +1,22 @@
+<div class="application" id="application-<%= id %>">
+  <h2><%= first_name %> <%= last_name %></h2>
+  <div>
+    <h3><%= address %></h3>
+    <h3><%= city %>, <%= state %></h3>
+    <h3><%= zip %></h3>
+  </div>
+   <h4><%= status %></h4>
+  <p><%= description %></p>
+  <% if pets.empty? %>
+    <h5>No pets added</h5>
+  <% else %>
+    <h5>Pets:</h5>
+    <ul>
+      <% pets.each do |pet| %>
+        <li>
+          <%= link_to("#{pet.name}", "/pets/#{pet.id}") %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

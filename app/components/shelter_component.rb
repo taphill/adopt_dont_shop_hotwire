@@ -2,6 +2,8 @@
 
 # rubocop:disable Lint/MissingSuper
 class ShelterComponent < ViewComponent::Base
+  attr_reader :id, :name, :city, :state, :rank, :foster_program
+
   def initialize(data)
     @id = data[:id]
     @name = data[:name]

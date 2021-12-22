@@ -1,12 +1,12 @@
-<div class="pet" id="pet-<%= @id %>">
+<div class="pet" id="pet-<%= id %>">
   <div>
-    <h1><%= @name %></h1>
-    <% if @adoptable %>
+    <h1><%= name %></h1>
+    <% if adoptable %>
       <%= image_tag('adoption_1.png') %>
     <% else %>
       <%= image_tag('certificate.png') %>
     <% end %>
   </div>
-  <h2><em><%= @breed %></em></h2>
-  <h2><em><%= @age %></em></h2>
+  <h2><em><%= breed %></em></h2>
+  <h2><em><%= age %></em></h2>
 </div>

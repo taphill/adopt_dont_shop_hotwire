@@ -1,0 +1,22 @@
+<h1>Your applications</h1>
+
+<section class="applications-grid">
+  <% @applications.each do |application| %>
+    <%= 
+      render(
+        ApplicationComponent.new(
+          id: application.id,
+          first_name: application.first_name,
+          last_name: application.last_name,
+          address: application.address,
+          city: application.city,
+          state: application.state,
+          zip: application.zip,
+          description: application.description,
+          status: application.status,
+          pets: application.pets
+        )
+      )
+    %>
+  <% end %>
+</section>

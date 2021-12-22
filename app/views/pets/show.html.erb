@@ -1,0 +1,13 @@
+<section class="pets-grid">
+  <%= 
+    render(
+      PetComponent.new(
+        id: @pet.id,
+        name: @pet.name,
+        age: @pet.age,
+        breed: @pet.breed,
+        adoptable: @pet.adoptable
+      )
+    )
+  %>
+</section>

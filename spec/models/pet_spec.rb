@@ -12,5 +12,7 @@ RSpec.describe Pet, type: :model do
 
   describe 'relationships' do
     it { is_expected.to belong_to(:shelter) }
+    it { is_expected.to have_many(:pet_applications) }
+    it { is_expected.to have_many(:applications).through(:pet_applications) }
   end
 end

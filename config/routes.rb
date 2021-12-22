@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get '/register', to: 'users#new'
   get '/profile', to: 'users#show'
 
-  resources :users, only: [:create]
+  resources :users, only: [:create] do
+    scope module: 'users' do
+      resources :applications, only: [:index]
+    end
+  end
 
   resources :shelters, only: [:index] do
     scope module: 'shelters' do
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :pets, only: [:index]
+  resources :pets, only: [:index, :show]
 
   match '*path', to: 'root#not_found', via: :all
 end

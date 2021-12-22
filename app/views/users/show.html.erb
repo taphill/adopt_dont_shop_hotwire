@@ -1,5 +1,7 @@
 <h1>Hello, <%= current_user.username %>!</h1>
 
+<%= link_to('View your applications', "users/#{current_user.id}/applications") %>
+
 <%= form_with(url: '/logout', method: :delete) do |form| %>
   <%= form.submit 'Log out' %>
 <% end %>
