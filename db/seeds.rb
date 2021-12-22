@@ -37,7 +37,7 @@ application_1 = user_1.applications.create(
   state: "LA",
   zip: "56073-1328",
   description: "Maiores quidem laudantium. Qui dicta quia. Incidunt natus similique. Veritatis quo quibusdam.",
-  status: "Approved"
+  status: 2
 )
 
 application_2 = user_1.applications.create(
@@ -48,7 +48,7 @@ application_2 = user_1.applications.create(
   state: "LA",
   zip: "56073-1328",
   description: "Similique porro tempora. In hic quia. Quasi non voluptatum. Odio culpa natus. Temporibus ipsa sit.",
-  status: "Pending"
+  status: 1
 )
 
 application_3 = user_1.applications.create(
@@ -59,7 +59,18 @@ application_3 = user_1.applications.create(
   state: "LA",
   zip: "56073-1328",
   description: "Dolores aspernatur voluptas. Sed accusamus illum. Illo eum quis. Tenetur dolores enim.",
-  status: "In Progress"
+  status: 0
+)
+
+application_4 = user_1.applications.create(
+  first_name: 'Mike',
+  last_name: 'Jones',
+  address: "146 Cinderella Cove",
+  city: "South Micha",
+  state: "LA",
+  zip: "56073-1328",
+  description: "Dolores aspernatur voluptas. Sed accusamus illum. Illo eum quis. Tenetur dolores enim.",
+  status: 3
 )
 
 PetApplication.create(pet: pet_1, application: application_1)

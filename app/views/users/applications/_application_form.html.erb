@@ -1,0 +1,34 @@
+<%= form_with(model: @application, url: "/users/#{current_user.id}/applications", data: { "turbo-frame" => "_top" }) do |form| %>
+  <% if @application.errors.any? %>
+    <div class="error-explanation" data-controller="error">
+      <ul>
+        <% @application.errors.uniq.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form.label :first_name %>
+  <%= form.text_field :first_name %>
+
+  <%= form.label :last_name %>
+  <%= form.text_field :last_name %>
+
+  <%= form.label :address %>
+  <%= form.text_field :address %>
+
+  <%= form.label :city %>
+  <%= form.text_field :city %>
+
+  <%= form.label :state %>
+  <%= form.text_field :state %>
+
+  <%= form.label :zip %>
+  <%= form.text_field :zip %>
+
+  <%= form.label :description %>
+  <%= form.text_area :description %>
+
+  <%= form.submit 'Submit' %>
+<% end %>

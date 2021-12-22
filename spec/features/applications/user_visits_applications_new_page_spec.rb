@@ -45,6 +45,6 @@ RSpec.describe 'User visits applications new page', type: :feature do
     expect(page).to have_content(state)
     expect(page).to have_content(zip)
     expect(page).to have_content(description)
-    expect(page).to have_content('In Progress')
+    expect(page).to have_content('In progress')
   end
 end

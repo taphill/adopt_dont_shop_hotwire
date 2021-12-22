@@ -25,6 +25,8 @@ module Users
       
       if @application.present? && @application.save
         redirect_to "/users/#{current_user.id}/applications/#{@application.id}"
+      else
+        render :new, status: :unprocessable_entity
       end
     end
 

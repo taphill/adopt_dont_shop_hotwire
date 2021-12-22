@@ -1,3 +1,7 @@
+.applications-heading {
+  text-align: center; 
+}
+
 .applications-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

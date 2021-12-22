@@ -33,7 +33,7 @@ RSpec.describe 'User visits applications show page', type: :feature do
     it { expect(page).to have_content(application_1.city) }
     it { expect(page).to have_content(application_1.state) }
     it { expect(page).to have_content(application_1.zip) }
-    it { expect(page).to have_content(application_1.status) }
+    it { expect(page).to have_content('In progress') }
     it { expect(page).to have_link(application_1.pets.first.name) }
   end
 end

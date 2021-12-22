@@ -1,19 +1,26 @@
-.field_with_errors * {
+.forms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem 0;
+  background-color: var(--disabled);
+  clip-path: polygon(5% 10%, 46% 1%, 46% 10%, 100% 0, 95% 90%, 31% 100%, 31% 90%, 0% 100%);
+}
+
+.forms turbo-frame {
+  display: flex;
+  justify-content: center;
   width: 100%;
 }
 
-.error-explanation {
-  margin: 1rem 2rem;
-  background-color: var(--error);
-  border-radius: 0.4rem;
+.forms form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 8rem 0 0 0;
 }
 
-.error-explanation ul {
-  list-style-type: circle;
-  margin: 0.5rem;
-  padding: 0 1.5rem;
+.forms .form-swap {
+  margin: 4rem;
 }
 
-.error-explanation li {
-  color: white;
-}

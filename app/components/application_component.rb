@@ -14,8 +14,17 @@ class ApplicationComponent < ViewComponent::Base
     @state = data[:state]
     @zip = data[:zip]
     @description = data[:description]
-    @status = data[:status]
+    @status = format_status(data[:status])
     @pets = data[:pets]
+  end
+
+  def format_status(status)
+    case status
+    when 'in_progress'
+      status.sub('_', ' ').capitalize
+    else
+      status.capitalize
+    end
   end
 end
 # rubocop:enable Lint/MissingSuper

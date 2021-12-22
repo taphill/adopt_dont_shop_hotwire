@@ -30,7 +30,6 @@ RSpec.describe ApplicationComponent, type: :component do
   it { expect(rendered_component).to have_text(application.state) }
   it { expect(rendered_component).to have_text(application.zip) }
   it { expect(rendered_component).to have_text(application.description) }
-  it { expect(rendered_component).to have_text(application.status) }
 
   context 'when application has pets' do
     it 'shows all the pets' do
@@ -65,6 +64,93 @@ RSpec.describe ApplicationComponent, type: :component do
   context 'when application has no pets' do
     it 'shows all a no pets message' do
       expect(rendered_component).to have_text('No pets added')
+    end
+  end
+
+  context 'when application is in progress' do
+    it 'displays In progress' do
+      application = create(:application, status: 0)
+
+      render_inline(
+        ApplicationComponent.new(
+          id: application.id,
+          first_name: application.first_name,
+          last_name: application.last_name,
+          address: application.address,
+          city: application.city,
+          state: application.state,
+          zip: application.zip,
+          description: application.description,
+          status: application.status,
+          pets: application.pets
+        )
+      )
+      expect(rendered_component).to have_text('In progress')
+    end
+  end
+
+  context 'when application is pending' do
+    it 'displays Pending' do
+      application = create(:application, status: 1)
+
+      render_inline(
+        ApplicationComponent.new(
+          id: application.id,
+          first_name: application.first_name,
+          last_name: application.last_name,
+          address: application.address,
+          city: application.city,
+          state: application.state,
+          zip: application.zip,
+          description: application.description,
+          status: application.status,
+          pets: application.pets
+        )
+      )
+      expect(rendered_component).to have_text('Pending')
+    end
+  end
+
+  context 'when application is accpeted' do
+    it 'displays Accepted' do
+      application = create(:application, status: 2)
+
+      render_inline(
+        ApplicationComponent.new(
+          id: application.id,
+          first_name: application.first_name,
+          last_name: application.last_name,
+          address: application.address,
+          city: application.city,
+          state: application.state,
+          zip: application.zip,
+          description: application.description,
+          status: application.status,
+          pets: application.pets
+        )
+      )
+      expect(rendered_component).to have_text('Accepted')
+    end
+  end
+  context 'when application is rejected' do
+    it 'displays Rejected' do
+      application = create(:application, status: 3)
+
+      render_inline(
+        ApplicationComponent.new(
+          id: application.id,
+          first_name: application.first_name,
+          last_name: application.last_name,
+          address: application.address,
+          city: application.city,
+          state: application.state,
+          zip: application.zip,
+          description: application.description,
+          status: application.status,
+          pets: application.pets
+        )
+      )
+      expect(rendered_component).to have_text('Rejected')
     end
   end
 end
