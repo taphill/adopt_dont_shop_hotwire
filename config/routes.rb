@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :users, only: [:create] do
     scope module: 'users' do
-      resources :applications, only: [:index]
+      resources :applications, only: [:index, :show, :new, :create]
     end
   end
 
@@ -21,5 +21,5 @@ Rails.application.routes.draw do
 
   resources :pets, only: [:index, :show]
 
-  match '*path', to: 'root#not_found', via: :all
+  # match '*path', to: 'root#not_found', via: :all
 end

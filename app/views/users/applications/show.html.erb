@@ -1,0 +1,18 @@
+<h1>Application</h1>
+
+<%= 
+  render(
+    ApplicationComponent.new(
+      id: @application.id,
+      first_name: @application.first_name,
+      last_name: @application.last_name,
+      address: @application.address,
+      city: @application.city,
+      state: @application.state,
+      zip: @application.zip,
+      description: @application.description,
+      status: @application.status,
+      pets: @application.pets
+    )
+  )
+%>

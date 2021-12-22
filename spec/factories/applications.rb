@@ -8,6 +8,6 @@ FactoryBot.define do
     state { Faker::Address.state_abbr }
     zip { Faker::Address.zip }
     description { Faker::Lorem.paragraph(sentence_count: 4, supplemental: false, random_sentences_to_add: 4) }
-    status { "In Progress" }
+    status { 0 }
   end
 end

@@ -12,6 +12,7 @@ RSpec.describe Application, type: :model do
     it { is_expected.to validate_presence_of(:zip) }
     it { is_expected.to validate_presence_of(:description) }
     it { is_expected.to validate_presence_of(:status) }
+    it { is_expected.to validate_numericality_of(:status) }
   end
 
   describe 'relationships' do
